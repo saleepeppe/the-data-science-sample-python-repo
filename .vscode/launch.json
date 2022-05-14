@@ -1,0 +1,42 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "task",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/src/",
+      "program": "main.py",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/envs/debug.env",
+      "justMyCode": true
+    },
+    {
+      "name": "pipeline",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/src/",
+      "module": "pipeline.table",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/envs/debug.env",
+      "justMyCode": true
+    },
+    {
+      "name": "pipeline dagit",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/src/",
+      "module": "dagit",
+      "args": [
+        "-f",
+        "pipeline/table.py"
+      ],
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/envs/debug.env",
+      "justMyCode": true
+    }
+  ]
+}

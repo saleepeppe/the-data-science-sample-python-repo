@@ -1,0 +1,14 @@
+version: "3.0"
+
+services:
+  task:
+    build:
+      context: .
+      args:
+        DEV_MODE: test
+        USERNAME: ${USER}
+    image: project/task
+    container_name: project_task
+    env_file:
+      - envs/debug.env
+    command: python main.py
