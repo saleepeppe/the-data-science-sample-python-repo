@@ -61,10 +61,10 @@ Regarding the tooling, this is the way you go:
 
 ## test template
 
-To verify the template is working:
+To verify the template is working properly:
 
 ```bash
-./scripts/init.sh
+./scripts/test.sh
 ```
 
 ## prototype
