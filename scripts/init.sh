@@ -36,6 +36,7 @@ print_header "Config vscode";
 code --install-extension docsmsft.docs-markdown
 code --install-extension eamodio.gitlens
 code --install-extension Gruntfuggly.todo-tree
+code --install-extension mechatroner.rainbow-csv
 code --install-extension mikestead.dotenv
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension ms-python.python
