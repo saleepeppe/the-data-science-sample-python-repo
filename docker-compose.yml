@@ -7,8 +7,8 @@ services:
       args:
         DEV_MODE: test
         USERNAME: ${USER}
-    image: project/task
-    container_name: project_task
+    image: ${PROJECT:-project}/${TASK:-task}
+    container_name: ${PROJECT:-project}_${TASK:-task}
     env_file:
       - envs/debug.env
     command: python main.py

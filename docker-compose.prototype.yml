@@ -7,8 +7,8 @@ services:
       args:
         DEV_MODE: prototype
         USERNAME: ${USER}
-    image: project/task.prototype
-    container_name: project_task.prototype
+    image: ${PROJECT:-project}/${TASK:-task}.prototype
+    container_name: ${PROJECT:-project}_${TASK:-task}.prototype
     volumes:
       - ./src/:/app/src/
       - ./jupyters:/app/jupyters
