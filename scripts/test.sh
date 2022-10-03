@@ -60,7 +60,7 @@ echo ""
 # TEST 4 #
 ##########
 print_header "TEST 4. Test docker-compose";
-docker-compose --log-level CRITICAL up --quiet
+docker-compose --log-level CRITICAL up task
 validate_command $? 4
 echo ""
 echo "Clean up:"
@@ -70,25 +70,12 @@ echo ""
 ##########
 # TEST 5 #
 ##########
-print_header "TEST 5. Test docker-compose prototype";
-docker-compose --log-level CRITICAL -f docker-compose.prototype.yml up --detach --quiet
+print_header "TEST 5. Test docker-compose jupyter";
+docker-compose --log-level CRITICAL -f docker-compose.yml up -d jupyter
 validate_command $? 5
 echo ""
 echo "Clean up:"
 docker-compose -f docker-compose.prototype.yml down --rmi all --volumes
-echo ""
-
-exit 0;
-
-##########
-# TEST 6 #
-##########
-print_header "TEST 6. Test pipeline";
-docker-compose --log-level CRITICAL -f docker-compose.pipeline.yml up --detach --quiet
-validate_command $? 6
-echo ""
-echo "Clean up:"
-docker-compose -f docker-compose.pipeline.yml down --rmi all --volumes
 echo ""
 
 exit 0;
