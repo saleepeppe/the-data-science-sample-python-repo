@@ -12,3 +12,22 @@ services:
     env_file:
       - envs/debug.env
     command: python main.py
+
+  jupyter:
+    build:
+      context: .
+      args:
+        DEV_MODE: prototype
+        USERNAME: ${USER}
+    image: ${PROJECT:-project}/jupyter
+    container_name: ${PROJECT:-project}_jupyter
+    volumes:
+      - ./src/:/app/src/
+      - ./jupyters:/app/jupyters
+      - ./data:/app/data
+    ports:
+      - 3000:3000
+      - 8890:8890
+    env_file:
+      - ./envs/debug.env
+    command: jupyter notebook --ip 0.0.0.0 --port 8890 --notebook-dir /app/ --no-browser
