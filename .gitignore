@@ -25,4 +25,4 @@ data/*
 !data/.gitkeep
 jupyters/*
 !jupyters/.gitkeep
-!jupyters/*.ipynb
+# !jupyters/*.ipynb

@@ -26,7 +26,8 @@ echo "";
 # GIT #
 #######
 print_header "Config git";
-git config --local include.path .gitconfig;
+# git config --local include.path .gitconfig;
+echo "Commented: SKIPPED!"
 echo "";
 
 ##########
