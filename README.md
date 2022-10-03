@@ -51,6 +51,14 @@ Regarding the tooling, this is the way you go:
 - **terraform** as iac tool, if you need it
 - **jupyter notebook** for prototyping, if you like it
 
+### poetry
+
+After [installing poetry](https://python-poetry.org/docs/#installation), you need to set your virtual environment creation inside the projects folders:
+
+```bash
+poetry config virtualenvs.in-project true
+```
+
 ## init
 
 **The following command must be executed only once!**
