@@ -75,7 +75,7 @@ docker-compose --log-level CRITICAL -f docker-compose.yml up -d jupyter
 validate_command $? 5
 echo ""
 echo "Clean up:"
-docker-compose -f docker-compose.prototype.yml down --rmi all --volumes
+docker-compose -f docker-compose.yml down --rmi all --volumes
 echo ""
 
 exit 0;

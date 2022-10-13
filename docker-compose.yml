@@ -26,8 +26,8 @@ services:
       - ./jupyters:/app/jupyters
       - ./data:/app/data
     ports:
-      - ${DAGIT_PORT-3000}:3000
-      - ${JUPYTER_PORT-8890}:${JUPYTER_PORT-8890}
+      - ${DAGIT_PORT:-3000}:3000
+      - ${JUPYTER_PORT:-8890}:${JUPYTER_PORT:-8890}
     env_file:
       - ./envs/debug.env
-    command: jupyter notebook --ip 0.0.0.0 --port ${JUPYTER_PORT-8890} --notebook-dir /app/ --no-browser
+    command: jupyter notebook --ip 0.0.0.0 --port ${JUPYTER_PORT:-8890} --notebook-dir /app/ --no-browser
