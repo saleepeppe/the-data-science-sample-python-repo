@@ -190,4 +190,10 @@ data/*
 !data/.gitkeep
 jupyters/*
 !jupyters/.gitkeep
-# !jupyters/*.ipynb
+!jupyters/to_git
+jupyters/to_git/*
+!jupyters/to_git/*.ipynb
+!jupyters/to_git/*.md
+envs/*
+!envs/*.sample.env
+!envs/*.local.env
